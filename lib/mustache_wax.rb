@@ -13,7 +13,7 @@ class MustacheWax
     templates_json = ActiveSupport::JSON.encode(templates)
     template_script = %(var mustache_templates = #{templates_json};)
 
-    File.open('public/javascripts/mustache_templates.js', 'w') do |f|
+    File.open('assets/javascripts/mustache_templates.js', 'w') do |f|
       f.write template_script
     end
   end
